@@ -10,9 +10,9 @@ function mostrar()
 
 	EdadIngresada=txtIdEdad.value
 
-	alert("Usted se llama "+nombreIngresado);
+	/*alert("Usted se llama "+nombreIngresado);
 
-	alert(" y tiene "+EdadIngresada+" años");
+	alert(" y tiene "+EdadIngresada+" años");*/
 
 	alert("Usted se llama "+nombreIngresado +" y tiene "+EdadIngresada+" años");
 }

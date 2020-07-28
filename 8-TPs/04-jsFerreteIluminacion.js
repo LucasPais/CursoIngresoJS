@@ -10,5 +10,79 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
-}
+
+    var cantidad; 
+    var descuento;
+    var marca;
+    var lampara;
+    var precio;
+    var impuesto;
+
+impuesto = 0;
+ lampara=35;
+ cantidad=txtIdCantidad.value;
+ marca=document.getElementById("Marca").value;
+
+ cantidad=parseInt(cantidad);
+ precio=(lampara*cantidad);
+
+ if(cantidad>5)//A
+    {
+        descuento=precio-(precio*50/100);
+    
+    }else
+        {
+         if(cantidad==5)//B
+         {
+         switch(marca)
+             {
+                case "ArgentinaLuz":
+                     descuento=precio-(precio*40/100);
+                          break;
+                  default:
+                     descuento=precio-(precio*30/100);
+                        break;
+            } 
+        }else
+         
+         if(cantidad==4)//C
+        {   switch(marca)
+           {
+              case "ArgentinaLuz":
+              case "FelipeLamparas":
+                  descuento=precio-(precio*25/100);
+                      break;
+              default:
+                   descuento=precio-(precio*20/100); 
+                       break;     
+                }
+            }else
+            {
+            cantidad==3;
+            switch(marca)
+            {
+                case "ArgentinaLuz":
+                     descuento=precio-(precio*15/100);
+                       break;
+                case "FelipeLamparas":
+                     descuento=precio-(precio*10/100);
+                         break;
+                default:
+                    descuento=precio-(precio*5/100);
+                         break;     
+                }   
+            }
+
+        }
+            precioConDescuento=descuento;
+         if(precioConDescuento>120)
+ {
+     impuesto=(precioConDescuento*0.1);
+    
+
+    alert("Usted pago "+impuesto+" de Ingresos Brutos");
+ }
+ 
+    txtIdprecioDescuento.value=precioConDescuento + impuesto;
+ 
+}                           

@@ -8,7 +8,7 @@ function Rectangulo ()
 {
     var ancho;
 	var largo;
-	var perometro;
+	var perimetro;
 	var alambre;
 
 	ancho=txtIdAncho.value;
